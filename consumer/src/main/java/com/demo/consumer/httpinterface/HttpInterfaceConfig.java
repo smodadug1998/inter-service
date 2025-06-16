@@ -16,7 +16,7 @@ import org.springframework.web.util.DefaultUriBuilderFactory;
 @Configuration
 public class HttpInterfaceConfig {
 
-    public WebClient.Builder webClientBuilder() {
+    /*public WebClient.Builder webClientBuilder() {
         return WebClient.builder();
     }
 
@@ -28,7 +28,7 @@ public class HttpInterfaceConfig {
 
         ProviderHttpInterface service = factory.createClient(ProviderHttpInterface.class);
         return service;
-    }
+    }*/
 
     @Bean
     @LoadBalanced
@@ -46,7 +46,7 @@ public class HttpInterfaceConfig {
     }
 
 
-    @Bean
+    /*@Bean
     @LoadBalanced
     public RestTemplate getRestTemplate() {
         return new RestTemplate();
@@ -59,5 +59,5 @@ public class HttpInterfaceConfig {
         HttpServiceProxyFactory factory = HttpServiceProxyFactory.builderFor(adapter).build();
 
         return factory.createClient(ProviderHttpInterface.class);
-    }
+    }*/
 }
